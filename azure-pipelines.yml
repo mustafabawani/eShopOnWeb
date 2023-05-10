@@ -40,3 +40,8 @@ steps:
     publishWebProjects: true
     arguments: '-o $(Build.ArtifactStagingDirectory) --configuration $(buildConfiguration)'
     zipAfterPublish: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'eShopOnWeb'
