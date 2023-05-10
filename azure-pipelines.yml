@@ -4,6 +4,8 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
+  env:
+    ASPNETCORE_ENVIRONMENT: Development
 
 variables:
   solution: '**/*.sln'
